@@ -1,25 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aula back-end 3° Ano - Polo arapongas</title>
+    <title>aula back-ende</title>
 </head>
 <body>
-    <h1>Calcule a media:</h1>
-    <button onclick="validar()">Lance as notas</button>
+    <h1>calcule a media:</h1>
+    <button onclick="validar()">lançe as notas</button>
     <script>
-        function validar(){
-            cont=1;
-            var media=0;
-            let nome = window.prompt('Qual e o seu nome? ')
+        function validar() {
+            cont = 1;
+            var media = 0;
+            let nome = window.prompt('Qual é o seu nome?')
 
-            while (cont <=4) {
+            while (cony <= 4) {
                 var notas = parseFloat(prompt(`Qual a nota ${cont}?`))
                 media=media+notas;
                 cont ++
             }
-            window.alert(`Ola, ${media/4}!`)
+            window.alert(`Olá, ${media/4}!`)
         }
     </script>
 </body>

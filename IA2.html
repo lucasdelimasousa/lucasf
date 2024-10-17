@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria de Fotos</title>
+    <style>
+        body {
+            background: linear-gradient(to right, darkblue, gold);
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: center;
+        }
+        .gallery-container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+        .gallery-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .nav-buttons {
+            margin-top: 20px;
+        }
+        .nav-buttons button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .nav-buttons button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Galeria de Fotos</h1>
+
+    <div class="gallery-container">
+        <img id="galleryImage" src="https://via.placeholder.com/600x400.png?text=Foto+1" alt="Foto da Galeria">
+        
+        <div class="nav-buttons">
+            <button id="prevButton">Anterior</button>
+            <button id="nextButton">Próximo</button>
+        </div>
+    </div>
+
+    <script>
+        // Array de URLs das imagens
+        const images = [
+            'https://via.placeholder.com/600x400.png?text=Foto+1',
+            'https://via.placeholder.com/600x400.png?text=Foto+2',
+            'https://via.placeholder.com/600x400.png?text=Foto+3',
+            'https://via.placeholder.com/600x400.png?text=Foto+4',
+            'https://via.placeholder.com/600x400.png?text=Foto+5'
+        ];
+
+        let currentIndex = 0;
+
+        const galleryImage = document.getElementById('galleryImage');
+        const prevButton = document.getElementById('prevButton');
+        const nextButton = document.getElementById('nextButton');
+
+        // Função para atualizar a imagem da galeria
+        function updateImage() {
+            galleryImage.src = images[currentIndex];
+        }
+
+        // Evento de clique para o botão "Anterior"
+        prevButton.addEventListener('click', function() {
+            currentIndex = (currentIndex === 0) ? images.length - 1 : currentIndex - 1;
+            updateImage();
+        });
+
+        // Evento de clique para o botão "Próximo"
+        nextButton.addEventListener('click', function() {
+            currentIndex = (currentIndex === images.length - 1) ? 0 : currentIndex + 1;
+            updateImage();
+        });
+    </script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria de Fotos</title>
+    <style>
+        body {
+            background: linear-gradient(to right, darkblue, gold);
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: center;
+        }
+        .gallery-container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+        .gallery-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .nav-buttons {
+            margin-top: 20px;
+        }
+        .nav-buttons button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .nav-buttons button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Galeria de Fotos</h1>
+
+    <div class="gallery-container">
+        <img id="galleryImage" src="https://via.placeholder.com/600x400.png?text=Foto+1" alt="Foto da Galeria">
+        
+        <div class="nav-buttons">
+            <button id="prevButton">Anterior</button>
+            <button id="nextButton">Próximo</button>
+        </div>
+    </div>
+
+    <script>
+        // Array de URLs das imagens
+        const images = [
+            'https://via.placeholder.com/600x400.png?text=Foto+1',
+            'https://via.placeholder.com/600x400.png?text=Foto+2',
+            'https://via.placeholder.com/600x400.png?text=Foto+3',
+            'https://via.placeholder.com/600x400.png?text=Foto+4',
+            'https://via.placeholder.com/600x400.png?text=Foto+5'
+        ];
+
+        let currentIndex = 0;
+
+        const galleryImage = document.getElementById('galleryImage');
+        const prevButton = document.getElementById('prevButton');
+        const nextButton = document.getElementById('nextButton');
+
+        // Função para atualizar a imagem da galeria
+        function updateImage() {
+            galleryImage.src = images[currentIndex];
+        }
+
+        // Evento de clique para o botão "Anterior"
+        prevButton.addEventListener('click', function() {
+            currentIndex = (currentIndex === 0) ? images.length - 1 : currentIndex - 1;
+            updateImage();
+        });
+
+        // Evento de clique para o botão "Próximo"
+        nextButton.addEventListener('click', function() {
+            currentIndex = (currentIndex === images.length - 1) ? 0 : currentIndex + 1;
+            updateImage();
+        });
+    </script>
+
+</body>
+</html>
